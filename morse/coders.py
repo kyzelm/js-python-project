@@ -1,4 +1,4 @@
-from .morseCode import morseCode
+from .utils import morseCode
 from .errors import WrongMorseCodeError, MorseCodeNotFoundError
 
 class Coder:

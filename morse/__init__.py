@@ -1,3 +1,5 @@
 from .coders import *
 from .errors import *
-from .morseCode import *
+from .utils import *
+from .fileManager import *
+from .learning import *
