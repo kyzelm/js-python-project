@@ -1,0 +1,42 @@
+C:\Users\damio\Dev\js-projekt\.venv\Scripts\python.exe C:\Users\damio\Dev\js-projekt\main.py
+Choose an option:
+1. Learn Morse Code
+2. Encoder
+3. Decoder
+4. Show morse code chart
+5. Exit
+Enter your choice (1-5): 1
+Starting Morse Code learning...
+Translate to Morse Code:
+G
+Your answer:
+Incorrect! The correct answer is:
+--.
+Translate to Morse Code:
+I
+Your answer: ..
+Correct!
+Translate to Morse Code:
+Q
+Your answer: exit
+Exiting the learning session.
+Choose an option:
+1. Learn Morse Code
+2. Encoder
+3. Decoder
+4. Show morse code chart
+5. Exit
+Enter your choice (1-5): 2
+Enter text to encode into Morse code:
+Ala ma kota
+Encoded Morse Code: .- .-.. .- / -- .- / -.- --- - .-
+Choose an option:
+1. Learn Morse Code
+2. Encoder
+3. Decoder
+4. Show morse code chart
+5. Exit
+Enter your choice (1-5): 5
+Exiting the program.
+
+Process finished with exit code 0
