@@ -8,12 +8,14 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.decoder.action('.... . .-.. .-.. ---'), 'HELLO')
         self.assertEqual(self.decoder.action('.... . .-.. .-.. --- / .-- --- .-. .-.. -..'), 'HELLO WORLD')
         self.assertEqual(self.decoder.action('.... . .-.. .-.. --- / .-- --- .-. .-.. -.. / ..'), 'HELLO WORLD I')
+        self.assertEqual(self.decoder.action(''), '')
 
     def testEncoder(self):
         self.encoder = Encoder()
         self.assertEqual(self.encoder.action('HELLO'), '.... . .-.. .-.. ---')
         self.assertEqual(self.encoder.action('HELLO WORLD'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -..')
         self.assertEqual(self.encoder.action('HELLO WORLD I'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -.. / ..')
+        self.assertEqual(self.encoder.action(''), '')
 
 
 if __name__ == '__main__':

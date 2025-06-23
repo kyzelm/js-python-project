@@ -1,4 +1,4 @@
-from morse import Encoder, Decoder, MorseLearning
+from morse import Encoder, Decoder, MorseLearning, morseCode
 
 def main():
     while True:
@@ -6,8 +6,9 @@ def main():
         print("1. Learn Morse Code")
         print("2. Encoder")
         print("3. Decoder")
-        print("4. Exit")
-        choice = input("Enter your choice (1-4): ")
+        print("4. Show morse code chart")
+        print("5. Exit")
+        choice = input("Enter your choice (1-5): ")
 
         if choice == '1':
             print("Starting Morse Code learning...")
@@ -26,6 +27,10 @@ def main():
             decoded_text = decoder.action(morse_code)
             print(f"Decoded Text: {decoded_text}")
         elif choice == '4':
+            print("Morse Code Chart:")
+            for letter, code in morseCode.items():
+                print(f"{letter}: {code}")
+        elif choice == '5':
             print("Exiting the program.")
             break
         else:

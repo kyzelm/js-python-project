@@ -34,9 +34,9 @@ class MorseLearning:
                 for letter in morseCode.keys():
                     self.toLearn.append(letter)
             elif self.level == 3 or self.level == 4:
-                self.toLearn = words
+                self.toLearn = list(words)
             elif self.level == 5 or self.level == 6:
-                self.toLearn = sentences
+                self.toLearn = list(sentences)
 
     def learn(self):
         self.setup()
@@ -49,9 +49,10 @@ class MorseLearning:
                 answer = input("Your answer: ").strip().upper()
                 if answer == self.encoder.action(item):
                     print("Correct!")
-                    self.toLearn.remove(item)
+                    tmpList = filter(lambda letter: letter != item, self.toLearn)
+                    self.toLearn = list(tmpList)
                     self.writeFile()
-                elif answer == "exit":
+                elif answer == "EXIT":
                     print("Exiting the learning session.")
                     break
                 else :
@@ -63,7 +64,7 @@ class MorseLearning:
                     print("Correct!")
                     self.toLearn.remove(item)
                     self.writeFile()
-                elif answer == "exit":
+                elif answer == "EXIT":
                     print("Exiting the learning session.")
                     break
                 else:
